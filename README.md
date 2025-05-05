@@ -1,102 +1,103 @@
-# Solar Energy Analysis Project
+# Proyecto de Análisis de Energía Solar
 
-This project contains a series of Jupyter notebooks for analyzing solar energy potential and economic feasibility in different locations. The analysis includes both Photovoltaic (PV) and Concentrated Solar Power (CSP) systems.
+Este proyecto contiene una serie de notebooks de Jupyter para analizar el potencial de energía solar y su viabilidad económica en diferentes ubicaciones. El análisis incluye tanto sistemas Fotovoltaicos (PV) como de Energía Solar Concentrada (CSP).
 
-## Project Structure
+## Estructura del Proyecto
 
-The project consists of the following notebooks:
+El proyecto consta de los siguientes notebooks:
 
-1. `final_limpiezas.ipynb`: Data cleaning and processing
-   - Processes weather data from CSV files
-   - Converts data to PVWatts v8 format
-   - Handles multiple locations (Chile, Russia, China)
-   - Calculates solar irradiance statistics
+1. `final_limpiezas.ipynb`: Limpieza y procesamiento de datos
+   - Procesa datos meteorológicos de archivos CSV
+   - Convierte datos al formato PVWatts v8
+   - Maneja múltiples ubicaciones (Chile, Rusia, China)
+   - Calcula estadísticas de irradiación solar
 
-2. `final_simulacion_pv.ipynb`: Photovoltaic system simulation
-   - Simulates PV system performance
-   - Analyzes energy production
+2. `final_simulacion_pv.ipynb`: Simulación de sistema fotovoltaico
+   - Simula el rendimiento del sistema PV
+   - Analiza la producción de energía
 
-3. `final_simulacion_csp.ipynb`: Concentrated Solar Power simulation
-   - Simulates CSP system performance
-   - Analyzes thermal energy production
+3. `final_simulacion_csp.ipynb`: Simulación de Energía Solar Concentrada
+   - Simula el rendimiento del sistema CSP
+   - Analiza la producción de energía térmica
 
-4. `final_lcoe.ipynb`: Levelized Cost of Energy analysis
-   - Calculates LCOE for different scenarios
-   - Economic feasibility analysis
+4. `final_lcoe.ipynb`: Análisis del Costo Nivelado de Energía
+   - Calcula el LCOE para diferentes escenarios
+   - Análisis de viabilidad económica
 
-5. `final_analisis_sensibilidad.ipynb`: Sensitivity analysis
-   - Analyzes how different parameters affect system performance
-   - Evaluates economic sensitivity
+5. `final_analisis_sensibilidad.ipynb`: Análisis de sensibilidad
+   - Analiza cómo diferentes parámetros afectan el rendimiento del sistema
+   - Evalúa la sensibilidad económica
 
-## Requirements
+## Requisitos
 
-- Python 3.10 or higher
+- Python 3.10 o superior
 - Jupyter Notebook
-- Required Python packages:
+- Paquetes de Python requeridos:
   - pandas
   - numpy
   - matplotlib
-  - pvlib (for PV simulations)
-  - SAM (System Advisor Model) for CSP simulations
+  - pvlib (para simulaciones PV)
+  - SAM (System Advisor Model) para simulaciones CSP
 
-## Installation
+## Instalación
 
-1. Clone this repository:
+1. Clonar este repositorio:
 ```bash
-git clone [repository-url]
-cd [repository-name]
+git clone [url-del-repositorio]
+cd [nombre-del-repositorio]
 ```
 
-2. Create a virtual environment (recommended):
+2. Crear un entorno virtual (recomendado):
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # En Windows: venv\Scripts\activate
 ```
 
-3. Install required packages:
+3. Instalar los paquetes requeridos:
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
+## Uso
 
-1. Start Jupyter Notebook:
+1. Iniciar Jupyter Notebook:
 ```bash
 jupyter notebook
 ```
 
-2. Open the notebooks in the following order:
-   - First run `final_limpiezas.ipynb` to process the weather data
-   - Then run either `final_simulacion_pv.ipynb` or `final_simulacion_csp.ipynb` depending on your needs
-   - Finally, run `final_lcoe.ipynb` and `final_analisis_sensibilidad.ipynb` for economic analysis
+2. Abrir los notebooks en el siguiente orden:
+   - Primero ejecutar `final_limpiezas.ipynb` para procesar los datos meteorológicos
+   - Luego ejecutar `final_simulacion_pv.ipynb` o `final_simulacion_csp.ipynb` según sus necesidades
+   - Finalmente, ejecutar `final_lcoe.ipynb` y `final_analisis_sensibilidad.ipynb` para el análisis económico
 
-## Input Data
+## Datos de Entrada
 
-The project uses weather data in CSV format with the following naming convention:
-- `tmy_[latitude]_[longitude]_[start_year]_[end_year].csv`
+El proyecto utiliza datos meteorológicos en formato CSV con la siguiente convención de nombres:
+- `tmy_[latitud]_[longitud]_[año_inicio]_[año_fin].csv`
 
-Example: `tmy_-38.320_-71.960_2005_2023.csv`
+Ejemplo: `tmy_-38.320_-71.960_2005_2023.csv`
 
-The input data should contain the following columns:
-- time(UTC)
-- T2m (Temperature)
-- RH (Relative Humidity)
-- G(h) (Global Horizontal Irradiance)
-- Gb(n) (Direct Normal Irradiance)
-- Gd(h) (Diffuse Horizontal Irradiance)
-- WS10m (Wind Speed)
-- WD10m (Wind Direction)
-- SP (Surface Pressure)
+Los datos de entrada deben contener las siguientes columnas:
+- time(UTC) (Tiempo UTC)
+- T2m (Temperatura)
+- RH (Humedad Relativa)
+- G(h) (Irradiancia Global Horizontal)
+- Gb(n) (Irradiancia Normal Directa)
+- Gd(h) (Irradiancia Horizontal Difusa)
+- WS10m (Velocidad del Viento)
+- WD10m (Dirección del Viento)
+- SP (Presión Superficial)
 
-## Output
+## Salida
 
-The processed data will be saved in PVWatts v8 format with the following naming convention:
-- `[original_filename]_pvwatts_final.csv`
+Los datos procesados se guardarán en formato PVWatts v8 con la siguiente convención de nombres:
+- `[nombre_archivo_original]_pvwatts_final.csv`
 
-## Contributing
+## Contribuciones
 
-Feel free to submit issues and enhancement requests.
+Siéntase libre de enviar problemas y solicitudes de mejora.
 
-## License
+## Licencia
 
-[Add your license information here] 
+[Añadir información de licencia aquí]
+
